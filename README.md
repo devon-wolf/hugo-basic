@@ -44,4 +44,7 @@ copyright = '2022 This Cool Person' # year and copyright holder
   # example: "Helvetica, Arial, sans-serif"
   # default is monospace
   font = "monospace"
+
+  # the title for the content on the home page
+  homeHeader = "Recent Posts"
 ```

@@ -1,0 +1,142 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  :root {
+    --background: {{ .Site.Params.backgroundColor | default "#f8f9fa" }};
+    --text: {{ .Site.Params.textColor | default "#34393f" }};
+    --accent: {{ .Site.Params.accentColor | default "#34393f" }};
+    --navlink: {{ .Site.Params.navColor | default "blue" }};
+    --link: {{ .Site.Params.linkColor | default "blue" }};
+    --visited: {{ .Site.Params.visitedLinkColor | default "purple" }};
+
+    --font: {{ .Site.Params.font | default "monospace" }}
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: {{ .Site.Params.backgroundColorDarkMode | default "#34393f" }};
+      --text: {{ .Site.Params.textColorDarkMode | default "#f8f9fa" }};
+      --accent: {{ .Site.Params.accentColorDarkMode | default "#f8f9fa" }};
+      --navlink: {{ .Site.Params.navColorDarkMode | default "skyblue" }};
+      --link: {{ .Site.Params.linkColorDarkMode | default "skyblue" }};
+      --visited: {{ .Site.Params.visitedLinkColorDarkMode | default "lightblue" }};
+    }
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 1rem;
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+  }
+
+  .body-wrapper {
+    height: 100%;
+    width: 90vw;
+    max-width: 800px;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    padding: 1rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h1 a:link,
+  h1 a:visited {
+    text-decoration: none;
+    color: unset;
+  }
+
+  h2,
+  h3,
+  h4,
+  .summary-title {
+    color: var(--accent);
+  }
+
+  hr {
+    border-color: var(--accent);
+  }
+
+  a:link {
+    color: var(--link);
+  }
+
+  a:visited {
+    color: var(--visited);
+  }
+
+  nav a:link,
+  nav a:visited {
+    color: var(--navlink);
+  }
+
+  .pagination,
+  .copyright,
+  .taglist,
+  .date {
+    font-size: .8rem;
+  }
+
+  .summaries,
+  nav ul,
+  .taglist ul {
+    list-style: none;
+    padding-left: unset;
+  }
+
+  nav ul,
+  .taglist ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .taglist {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+  }
+
+  nav li,
+  .taglist li {
+    margin-right: 1rem;
+  }
+
+  .summary {
+    margin: 1rem 0 2.5rem 0;
+  }
+
+  .taglist ul {
+    margin: 0 1rem;
+  }
+
+  article p {
+    line-height: 1.5rem;
+
+    margin: 1.5rem 0;
+  }
+
+  article p + p {
+    text-indent: 1rem;
+  }
+</style>

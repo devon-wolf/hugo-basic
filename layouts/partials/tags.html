@@ -1,0 +1,11 @@
+{{ $title := .Title }}
+{{ with .Params.tags }}
+<div class="taglist">
+  <label for="{{ $title }} tags">Tags:</label>
+  <ul id="{{ $title }} tags">
+    {{ range . }}
+    <li><a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
