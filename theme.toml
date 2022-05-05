@@ -1,13 +1,13 @@
-name = "Blank"
+name = "hugo-basic"
 license = "MIT"
-licenselink = "https://github.com/vimux/blank/blob/master/LICENSE"
-description = "Starter Hugo theme for developers."
-homepage = "https://github.com/vimux/blank/"
-demosite = "https://blank-demo.netlify.app/"
+licenselink = "https://github.com/devon-wolf/hugo-basic/blob/master/LICENSE"
+description = "Basic Hugo theme based on Blank by Vimux"
+homepage = "https://github.com/devon-wolf/hugo-basic/"
+demosite = ""
 tags = ["blog", "plain", "blank", "starter", "development"]
 features = ["blog"]
 min_version = "0.20"
 
 [author]
-  name = "Vimux"
-  homepage = "https://github.com/vimux"
+  name = "devon-wolf"
+  homepage = "https://github.com/devon-wolf"
